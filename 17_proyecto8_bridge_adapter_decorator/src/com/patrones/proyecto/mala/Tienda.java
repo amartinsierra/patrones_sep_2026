@@ -1,4 +1,4 @@
-package com.patrones_proyecto.mala;
+package com.patrones.proyecto.mala;
 
 public class Tienda {
     public void procesarPedido(Pedido pedido, String tipoNotificacion) {

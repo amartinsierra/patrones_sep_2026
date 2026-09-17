@@ -1,4 +1,4 @@
-package com.patrones_proyecto.mala;
+package com.patrones.proyecto.mala;
 
 public class Pedido {
     private String producto;
