@@ -20,7 +20,7 @@ public class Curso implements ElementoFormacion {
     }
 
 	@Override
-	public double getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 }

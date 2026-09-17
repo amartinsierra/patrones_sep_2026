@@ -19,7 +19,7 @@ public abstract class CursoDecorador implements ElementoFormacion {
         return curso.getPrecio();
     }
     @Override
-	public double getNombre() {
+	public String getNombre() {
 		return curso.getNombre();
 	}
 }
