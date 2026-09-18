@@ -1,14 +1,18 @@
 package originador;
 
-import memento.DocumentoMemento;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Documento  {
+import memento.DocumentoMemento;
+import observer.Observador;
+
+public class Documento  implements Subject {
     private String contenido = "";
-    
+    private List<Observador> observadores = new ArrayList<>();
 
     public void escribir(String texto) {
         contenido += texto;
-        
+        notificar();
     }
 
     public DocumentoMemento guardar() {
@@ -17,13 +21,22 @@ public class Documento  {
 
     public void restaurar(DocumentoMemento memento) {
         contenido = memento.getContenido();
-       
+        notificar();
     }
 
     public String getContenido() {
         return contenido;
     }
 
-    
+    @Override
+	public void agregarObservador(Observador obs) {
+        observadores.add(obs);
+    }
+
+    private void notificar() {
+        for (Observador obs : observadores) {
+            obs.actualizar(contenido);
+        }
+    }
 }
 
