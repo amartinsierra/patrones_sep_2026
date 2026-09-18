@@ -28,6 +28,7 @@ public class EnTierra implements Estado {
 		System.out.println("No puede regresar estando en tierra");
 
 	}
+	
 
 	/*public void handleCommand(String command, Controlador controlador) {
 		switch (command.toLowerCase()) {
